@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import reactDOM from 'react-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 // Styled Components
-
 import {
     NavbarWrapper,
     NavContentWrapper,
@@ -10,24 +11,60 @@ import {
     NavLogoWrapper,
     NavRightWrapper,
     Burger,
-    BurgerLine
+    BurgerLine,
+    NavLogo
 } from './Navbar.styles.js';
 
 // Static Files
+import Logo from '../../static_files/png/ABHLogo.png';
+
+// 
 
 
-const Navbar = () => {
+
+const Navbar = ({props}) => {
+
+    // Navbar Change on Scroll
+    const [scrollTransparent, setScrollTransparent] = useState(true)
+    window.onscroll = () =>{
+        if(scrollTransparent){
+            if(window.scrollY >= 100) setScrollTransparent(false);
+        }
+        else{
+            if(window.scrollY < 100) setScrollTransparent(true);
+        }
+    }
+
+    useEffect(()=>{
+        console.log(scrollTransparent);
+    },[scrollTransparent])
+
+    // Link Styles
+    const LinkStyles = {
+        textDecoration: 'none',
+        color:'white',
+    }
+    
+    // Hamburger Menu Open and Close function
+
+
+
     return (
-        <NavbarWrapper>
+        <NavbarWrapper scrollTransparent={scrollTransparent}>
             <NavContentWrapper>
                 <NavLeftWrapper>
-                    <NavItem>Home</NavItem>
-                    <NavItem>About Us</NavItem>
-                    <NavItem>Resident Life</NavItem>
+                    <NavItem>
+                        <RouterLink to='/' style={LinkStyles}>Home</RouterLink>
+                    </NavItem>
+                    <NavItem>
+                        <RouterLink to='/about' style={LinkStyles}>About Us </RouterLink>
+                    </NavItem>
+                    <NavItem>
+                        <RouterLink to='/ResidentLife' style={LinkStyles}>Resident Life </RouterLink>
+                    </NavItem>
                 </NavLeftWrapper>
                 <NavLogoWrapper>
-                    <NavItem>Logo</NavItem>
-                    {/* <NavLogo src={} /> */}
+                    <NavLogo src={Logo}/>
                 </NavLogoWrapper>
                 <NavRightWrapper>
                     <NavItem>Contact</NavItem>

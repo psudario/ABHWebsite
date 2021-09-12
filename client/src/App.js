@@ -1,11 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect}from 'react';
+import {BrowserRouter, Switch, Route as BrowserRoute} from 'react-router-dom';
 
+// Components
 import Navbar from './components/Navbar/Navbar.index.js';
+
+// Pages
+import Home from './pages/Home/Home.index.js';
+import About from './pages/About/About.index.js';
+import ResidentLife from './pages/ResidentLife/ResidentLife.index.js';
 
 const App = () => {
     return (
         <div>
-            <Navbar />
+            <BrowserRouter>
+                <Navbar/>
+                <Switch>
+                    <BrowserRoute path='/' exact component={Home}/>
+                    <BrowserRoute path='/about' exact component={About}/>
+                    <BrowserRoute path='/residentlife' exact component={ResidentLife}/>
+                </Switch>
+            </BrowserRouter>
         </div>
     )
 }
