@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import reactDOM from 'react-dom';
+import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 // Styled Components
@@ -35,10 +34,6 @@ const Navbar = ({props}) => {
         }
     }
 
-    useEffect(()=>{
-        console.log(scrollTransparent);
-    },[scrollTransparent])
-
     // Link Styles
     const LinkStyles = {
         textDecoration: 'none',
@@ -50,7 +45,7 @@ const Navbar = ({props}) => {
 
 
     return (
-        <NavbarWrapper scrollTransparent={scrollTransparent}>
+        <NavbarWrapper scrollOpacity={scrollTransparent}>
             <NavContentWrapper>
                 <NavLeftWrapper>
                     <NavItem>

@@ -3,16 +3,14 @@ import styled from 'styled-components';
 export const NavbarWrapper = styled.div`
     position: fixed;
     left: 0;
+    padding-left: 10px;
     right: 0;
+    padding-right: 10px;
     height: 12vh;
-    background-color: ${props => {return (props.scrollTransparent)? 'green' : 'grey'}};
+    background-color: rgba(167, 171, 170, ${props =>{return Number(!props.scrollOpacity);}});
     
-
     display: flex;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-
     transition: all 300ms ease-in-out;
 
 `;
