@@ -7,18 +7,32 @@ export const NavbarWrapper = styled.div`
     right: 0;
     padding-right: 10px;
     height: 12vh;
-    background-color: rgba(167, 171, 170, ${props =>{return Number(!props.scrollOpacity);}});
-    
-    display: flex;
+    background-color: rgba(167, 171, 170, ${
+        props => {
+            return props.scrollOpacity ? 0 : 1;
+        }
+    });
+    color: red;
+
     align-items: center;
-    transition: all 300ms ease-in-out;
+    transition: all 300ms ease;
+    color: #4C4E4F;
+    z-index: 200;
+
+    box-shadow: ${props => {
+        return props.scrollOpacity ? '0 0' : '0 0 10px' ;
+    }} black;
+
 
 `;
 export const NavContentWrapper = styled.div`
-    display: flex;
+    display: ${props => {
+        return props.scrollOpacity ? 'none' : 'flex';
+    }};
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    color: inherit;
 
     @media (max-width: 978px){
         display: flex;
@@ -30,7 +44,7 @@ export const NavLeftWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     width: 33%;
-    color: black;
+    background-color: inherit;
 
     @media (max-width: 978px){
         
@@ -54,7 +68,19 @@ export const NavLeftWrapper = styled.div`
 
 `;
 export const NavItem = styled.h2`
-    color: white;
+    cursor: pointer;
+    background-color: inherit;
+    color: inherit;
+    text-decoration: none;
+    transition: all 300ms ease;
+    
+    
+    &:hover{
+        color: rgba(219, 220, 225, 1);
+        text-decoration: underline;
+        text-decoration-thickness: 5px;
+        transition: all 300ms ease;
+    }
 `;
 export const NavRightWrapper = styled.div`
     display: flex;

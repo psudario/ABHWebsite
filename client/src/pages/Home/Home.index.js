@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Hero from '../../components/Hero/Hero.index.js';
+
 import {
     HomeWrapper
 } from './Home.styles.js';
@@ -7,15 +9,7 @@ import {
 const Home = () => {
     return (
         <HomeWrapper>
-            <h1>Home</h1>
-            <h1>Home</h1>
-            <h1>Home</h1>
-            <h1>Home</h1>
-            <h1>Home</h1>
-            <h1>Home</h1>
-            <h1>Home</h1>
-            <h1>Home</h1>
-            <h1>Home</h1>
+            <Hero />
         </HomeWrapper>
     )
 }

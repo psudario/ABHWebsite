@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 // Styled Components
@@ -34,28 +34,39 @@ const Navbar = ({props}) => {
         }
     }
 
+    // Manage State for new page
+    const [page, setPage] = useState('home')
+    useState(()=>{
+        console.log(page)
+    }, [page])
+
     // Link Styles
     const LinkStyles = {
-        textDecoration: 'none',
-        color:'white',
+        textDecoration: 'inherit',
+        color:'inherit',
+
     }
     
+    useEffect(() => {
+        console.log(page);
+    }, [page])
+
     // Hamburger Menu Open and Close function
 
 
 
     return (
-        <NavbarWrapper scrollOpacity={scrollTransparent}>
-            <NavContentWrapper>
+        <NavbarWrapper scrollOpacity={scrollTransparent} currPage={page}>
+            <NavContentWrapper scrollOpacity={scrollTransparent}>
                 <NavLeftWrapper>
                     <NavItem>
-                        <RouterLink to='/' style={LinkStyles}>Home</RouterLink>
+                        <RouterLink to='/' onClick={() => setPage('home')} style={LinkStyles}>Home</RouterLink>
                     </NavItem>
                     <NavItem>
-                        <RouterLink to='/about' style={LinkStyles}>About Us </RouterLink>
+                        <RouterLink to='/about' onClick={() => setPage('about')} style={LinkStyles}>About Us </RouterLink>
                     </NavItem>
                     <NavItem>
-                        <RouterLink to='/ResidentLife' style={LinkStyles}>Resident Life </RouterLink>
+                        <RouterLink to='/ResidentLife' onClick={() => setPage('residentlife')} style={LinkStyles}>Resident Life </RouterLink>
                     </NavItem>
                 </NavLeftWrapper>
                 <NavLogoWrapper>

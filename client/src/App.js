@@ -3,6 +3,7 @@ import {BrowserRouter, Switch, Route as BrowserRoute} from 'react-router-dom';
 
 // Components
 import Navbar from './components/Navbar/Navbar.index.js';
+import Footer from './components/Footer/Footer.index.js';
 
 // Pages
 import Home from './pages/Home/Home.index.js';
@@ -19,6 +20,7 @@ const App = () => {
                     <BrowserRoute path='/about' exact component={About}/>
                     <BrowserRoute path='/residentlife' exact component={ResidentLife}/>
                 </Switch>
+                <Footer />
             </BrowserRouter>
         </div>
     )
