@@ -6,11 +6,17 @@ import {
     HeroTextWrapper,
     HeroMainText,
     HeroCopyText,
-    // HeroImg
+    
+    HeroScrollWrapper,
+    HeroScrollText,
+    HeroScrollImg,
+    HeroFadeWrapper
 } from './Hero.styles.js';
 
 // Static Files
 import HeroBackgroundImage from '../../static_files/jpg/HousePictures/913Victoria_FrontYard.jpg'
+import ScrollArrow from '../../static_files/png/ScrollArrow.png';
+
 
 const Hero = () => {
     return (
@@ -22,6 +28,13 @@ const Hero = () => {
                     Volutpat consequat mauris nunc congue nisi vitae suscipit. Mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Nec ullamcorper sit amet risus nullam eget felis. Amet cursus sit amet dictum sit amet justo. Consequat semper viverra nam libero justo laoreet sit amet cursus. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Venenatis tellus in metus vulputate eu scelerisque. Et malesuada fames ac turpis egestas maecenas pharetra. Elit eget gravida cum sociis natoque penatibus et magnis. A scelerisque purus semper eget. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae.
                 </HeroCopyText>
             </HeroTextWrapper>
+                <HeroFadeWrapper>
+                    <HeroScrollWrapper>
+                            <HeroScrollText>Keep Scrolling</HeroScrollText>
+                            <HeroScrollImg src={ScrollArrow}/>
+                    </HeroScrollWrapper>
+                </HeroFadeWrapper>
+
         </HeroWrapper>
     )
 }
