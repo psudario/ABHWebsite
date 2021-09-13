@@ -88,16 +88,16 @@ export const HeroCopyText = styled.h4`
 `;
 
 export const HeroFadeWrapper = styled.div`
-    animation: ${FadeInAnimation} 10s ease ;
+    animation: ${ScrollFadeAnimation} 15s ease ;
 `;
 
 export const HeroScrollWrapper = styled.div`
     height: 12vh;
     width: 12vh;
 
-    animation: ${Bounce} 1s ease 10s;
+    animation: ${Bounce} 1s ease 15s;
     animation-iteration-count: 10;
-    margin: 10px;
+    margin-bottom: 10px;
     padding: 20px;
 
     display: flex;

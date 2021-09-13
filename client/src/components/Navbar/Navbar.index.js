@@ -36,9 +36,6 @@ const Navbar = ({props}) => {
 
     // Manage State for new page
     const [page, setPage] = useState('home')
-    useState(()=>{
-        console.log(page)
-    }, [page])
 
     // Link Styles
     const LinkStyles = {
@@ -46,10 +43,6 @@ const Navbar = ({props}) => {
         color:'inherit',
 
     }
-    
-    useEffect(() => {
-        console.log(page);
-    }, [page])
 
     // Hamburger Menu Open and Close function
 
