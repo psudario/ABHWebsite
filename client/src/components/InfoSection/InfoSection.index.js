@@ -19,20 +19,18 @@ const InfoSection = (props) => {
     return (
         <InfoSectionWrapper primaryTheme={props.primaryTheme} leftText={props.leftText}>
             <InfoSectionImgWrapper>
-                <InfoSectionImg image={props.image}/>
+                <InfoSectionImg svg={props.svg} image={props.image}/>
             </InfoSectionImgWrapper>
             <InfoSectionTextWrapper>
                 <InfoSectionTitle>
                     {props.title}
                 </InfoSectionTitle>
                 {props.bullets? 
-                    <ul>
-                        <li>The Queen's Gambit will go down</li>
-                        <InfoSectionBullet className="Walter">Walter Steele was kidnapped</InfoSectionBullet>
+                    <InfoSectionBullets>
                         {props.bullets.map(bullet => {
                             return (<InfoSectionBullet>{bullet}</InfoSectionBullet>)
                         })}
-                    </ul>
+                    </InfoSectionBullets>
                     : 
                     <InfoSectionSubtext>
                         {props.text}

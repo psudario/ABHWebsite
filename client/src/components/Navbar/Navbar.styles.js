@@ -115,5 +115,5 @@ export const BurgerLine = styled.div`
     background-color: brown;
     width: 20px;
     height: 3px;
-    margin: 2px;
+    margin: 2px 0px;
 `;

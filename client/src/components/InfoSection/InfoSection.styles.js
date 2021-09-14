@@ -37,15 +37,12 @@ export const InfoSectionImgWrapper = styled.div`
 export const InfoSectionImg = styled.div`
     background-image: url(${props => {return props.image}});
     background-position: center;
-    background-size: cover;
+    background-size: ${props => {return props.svg? 'contain' : 'cover'}};
     background-repeat: no-repeat;
-
     height: 50vh;
     width: 50vh;
-    background-color: white;
-    border-radius: 50%;
-
-    box-shadow: 0 0 5px 1px black;
+    border-radius: ${props => {return props.svg? 0 : '50%'}};
+    box-shadow: ${props => {return props.svg? '' : `0 0 5px 1px black`}};
 
 `;
 
@@ -57,13 +54,16 @@ export const InfoSectionTextWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 
 `;
 export const InfoSectionTitle = styled.h1`
-    margin: 25px 0px;
+    margin: 25px;
 `;
 export const InfoSectionSubtext = styled.h3`
-    min-width: 30vw;
+    max-width: 30vw;
+    padding: 10px;
+    text-align: center;
 `;
 export const InfoSectionBullets = styled.ul``;
 export const InfoSectionBullet = styled.li`
