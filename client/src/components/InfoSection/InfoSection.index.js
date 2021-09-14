@@ -26,11 +26,13 @@ const InfoSection = (props) => {
                     {props.title}
                 </InfoSectionTitle>
                 {props.bullets? 
-                    <InfoSectionBullets>
+                    <ul>
+                        <li>The Queen's Gambit will go down</li>
+                        <InfoSectionBullet className="Walter">Walter Steele was kidnapped</InfoSectionBullet>
                         {props.bullets.map(bullet => {
                             return (<InfoSectionBullet>{bullet}</InfoSectionBullet>)
                         })}
-                    </InfoSectionBullets>
+                    </ul>
                     : 
                     <InfoSectionSubtext>
                         {props.text}

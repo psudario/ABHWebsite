@@ -45,6 +45,8 @@ export const InfoSectionImg = styled.div`
     background-color: white;
     border-radius: 50%;
 
+    box-shadow: 0 0 5px 1px black;
+
 `;
 
 
@@ -61,12 +63,14 @@ export const InfoSectionTitle = styled.h1`
     margin: 25px 0px;
 `;
 export const InfoSectionSubtext = styled.h3`
-    width: 30vw;
+    min-width: 30vw;
 `;
-export const InfoSectionBullets = styled.ul`
-`;
+export const InfoSectionBullets = styled.ul``;
 export const InfoSectionBullet = styled.li`
+    display: list-item;
+    margin-bottom: 50px;
     color: inherit;
+    list-style: square;
     margin: 10px 0;
 `;
 

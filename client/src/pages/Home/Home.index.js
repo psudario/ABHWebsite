@@ -28,13 +28,16 @@ const Home = () => {
                 title={HeroData.title}
                 text={HeroData.text}
             />
+            <BackgroundImage
+                image={HomeBackgroundImages.kitchen}
+            />
             <InfoSection
                 image={HomeInfo1.image}
                 title={HomeInfo1.title}
                 text={HomeInfo1.text}
             />
             <BackgroundImage
-                image={HomeBackgroundImages.kitchen}
+                image={HomeBackgroundImages.livingRoom}
             />
             <InfoSection 
                 primaryTheme
@@ -42,9 +45,6 @@ const Home = () => {
                 image={HomeInfo2.image}
                 title={HomeInfo2.title}
                 bullets={HomeInfo2.bullets}
-            />
-            <BackgroundImage
-                image={HomeBackgroundImages.livingRoom}
             />
         </HomeWrapper>
     )
