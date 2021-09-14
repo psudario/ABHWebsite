@@ -40,30 +40,30 @@ const Home = () => {
             <BackgroundImage
                 image={HomeBackgroundImages.kitchen}
             />
-            {/* <InfoSection
+            <InfoSection
                 image={HomeInfo1.image}
                 title={HomeInfo1.title}
                 text={HomeInfo1.text}
-            /> */}
+            />
             <BackgroundImage
                 image={HomeBackgroundImages.livingRoom}
             />
-            {/* <InfoSection 
+            <InfoSection 
                 primaryTheme
                 leftText
                 image={HomeInfo2.image}
                 title={HomeInfo2.title}
                 bullets={HomeInfo2.bullets}
-            /> */}
+            />
             <BackgroundImage
                 image={HomeBackgroundImages.bedroom}
             />
-            {/* <InfoSection 
+            <InfoSection 
                 svg
                 image={Contact.image}
                 title={Contact.title}
                 bullets={Contact.bullets}
-            /> */}
+            />
         </HomeWrapper>
     )
 }

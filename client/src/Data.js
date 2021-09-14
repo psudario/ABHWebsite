@@ -44,9 +44,10 @@ export const Contact = {
     image: Logo,
     title: "Contact Information",
     bullets: [
-        "Address: 1234 StreetName Dr, City, State, 0000",
+        "Address: 1234 StreetName Dr, City, State, 12345",
         "Phone: (xxx)xxx-xxxx",
-        "Email: companyname@company.com"
+        "Email: companyname@company.com",
+        "Operating Hours: Mon-Fri 8AM-6PM | Sat-Sun 12PM-4PM"
     ]
 }
 
