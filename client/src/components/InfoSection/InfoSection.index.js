@@ -19,7 +19,7 @@ const InfoSection = (props) => {
     return (
         <InfoSectionWrapper primaryTheme={props.primaryTheme} leftText={props.leftText}>
             <InfoSectionImgWrapper>
-                <InfoSectionImg src={props.img}/>
+                <InfoSectionImg image={props.image}/>
             </InfoSectionImgWrapper>
             <InfoSectionTextWrapper>
                 <InfoSectionTitle>

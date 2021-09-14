@@ -6,23 +6,45 @@ import InfoSection from '../../components/InfoSection/InfoSection.index.js';
 
 // Styled Components
 import {
-    HomeWrapper
+    HomeWrapper,
+    BackgroundImage
 } from './Home.styles.js';
 
 // Data
-import { HomeInfo1 } from '../../Data.js';
+import {
+    HeroData,
+    HomeInfo1,
+    HomeInfo2,
+    HomeBackgroundImages
+} from '../../Data.js';
 
 
 
 const Home = () => {
     return (
         <HomeWrapper>
-            <Hero />
+            <Hero
+                image={HeroData.image}
+                title={HeroData.title}
+                text={HeroData.text}
+            />
             <InfoSection
-                img={HomeInfo1.image}
+                image={HomeInfo1.image}
                 title={HomeInfo1.title}
-                // text={HomeInfo1.text}
-                bullets={HomeInfo1.bullets}
+                text={HomeInfo1.text}
+            />
+            <BackgroundImage
+                image={HomeBackgroundImages.kitchen}
+            />
+            <InfoSection 
+                primaryTheme
+                leftText
+                image={HomeInfo2.image}
+                title={HomeInfo2.title}
+                bullets={HomeInfo2.bullets}
+            />
+            <BackgroundImage
+                image={HomeBackgroundImages.livingRoom}
             />
         </HomeWrapper>
     )

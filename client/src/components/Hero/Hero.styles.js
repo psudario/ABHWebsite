@@ -1,6 +1,6 @@
 import styled, {keyframes} from 'styled-components';
 
-// Keyfram Animations
+// Keyframe Animations
 const FadeInAnimation = keyframes`
     0%{
         opacity: 0%;
@@ -35,6 +35,7 @@ const Bounce = keyframes`
 `;
 
 
+
 export const HeroWrapper = styled.div`
     background-image: url(${props => {return props.backgroundImage}});
     
@@ -54,10 +55,9 @@ export const HeroWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 10px black;
+    box-shadow: inset 0 0 10px black;
+    
 `;
-
-
 export const HeroTextWrapper = styled.div`
     
 
@@ -76,21 +76,16 @@ export const HeroTextWrapper = styled.div`
     /* rgb(219, 220, 225) */
     box-shadow: 0 0 10px 1px black;
     
-`   
-    
-
+`; 
 export const HeroMainText = styled.h1`
     margin-bottom: 25px;
-    `;
-
+`;
 export const HeroCopyText = styled.h4`
     width: 50vw;
 `;
-
 export const HeroFadeWrapper = styled.div`
     animation: ${ScrollFadeAnimation} 15s ease ;
 `;
-
 export const HeroScrollWrapper = styled.div`
     height: 12vh;
     width: 12vh;

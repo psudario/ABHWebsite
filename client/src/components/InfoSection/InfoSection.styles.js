@@ -5,6 +5,7 @@ const secondaryColor = "brown";
 
 
 export const InfoSectionWrapper = styled.div`
+
     height: 60vh;
     background-color: ${props => {
         return props.primaryTheme? primaryColor : secondaryColor;
@@ -21,6 +22,7 @@ export const InfoSectionWrapper = styled.div`
         : 
         `"col1 col2"`; 
     }};
+
 `;
 
 
@@ -30,9 +32,10 @@ export const InfoSectionImgWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
 `;
 export const InfoSectionImg = styled.div`
-    background-image: url(${props => {return props.src}});
+    background-image: url(${props => {return props.image}});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,6 +44,7 @@ export const InfoSectionImg = styled.div`
     width: 50vh;
     background-color: white;
     border-radius: 50%;
+
 `;
 
 
