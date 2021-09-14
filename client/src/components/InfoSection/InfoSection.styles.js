@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const primaryColor = "pink";
-const secondaryColor = "brown";
+const primaryColor = "#3a3a3a";
+const secondaryColor = "#a4ac9c";
 
 
 export const InfoSectionWrapper = styled.div`

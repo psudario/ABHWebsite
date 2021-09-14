@@ -12,11 +12,11 @@ export const NavbarWrapper = styled.div`
             return props.scrollOpacity ? 0 : 1;
         }
     });
-    color: red;
 
     align-items: center;
     transition: all 300ms ease;
-    color: #4C4E4F;
+    /* color: #4C4E4F; */
+    color: #3a3a3a;
     z-index: 200;
 
     box-shadow: ${props => {

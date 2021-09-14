@@ -49,7 +49,6 @@ const Home = () => {
                 image={HomeBackgroundImages.livingRoom}
             />
             <InfoSection 
-                primaryTheme
                 leftText
                 image={HomeInfo2.image}
                 title={HomeInfo2.title}

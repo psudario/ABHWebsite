@@ -10,6 +10,9 @@ import Home from './pages/Home/Home.index.js';
 import About from './pages/About/About.index.js';
 import ResidentLife from './pages/ResidentLife/ResidentLife.index.js';
 
+// Data
+import { Copyright } from './Data.js';
+
 const App = () => {
     return (
         <div>
@@ -20,7 +23,7 @@ const App = () => {
                     <BrowserRoute path='/about' exact component={About}/>
                     <BrowserRoute path='/residentlife' exact component={ResidentLife}/>
                 </Switch>
-                <Footer />
+                <Footer text={Copyright.text}/>
             </BrowserRouter>
         </div>
     )

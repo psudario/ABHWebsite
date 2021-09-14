@@ -2,13 +2,26 @@ import React from 'react'
 
 // Styled Components
 import {
-    FooterWrapper
+    FooterWrapper,
+    SocialMedia,
+    SocialIcon,
+    CopyrightWrapper,
+    Copyright
 } from './Footer.styles.js';
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <FooterWrapper>
-
+            <SocialMedia>
+                <SocialIcon src={null}/>
+                <SocialIcon src={null}/>
+                <SocialIcon src={null}/>
+            </SocialMedia>
+            <CopyrightWrapper>
+                <Copyright>
+                    {props.text}
+                </Copyright>
+            </CopyrightWrapper>
         </FooterWrapper>
     )
 }
