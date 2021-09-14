@@ -19,10 +19,10 @@ const Home = () => {
         <HomeWrapper>
             <Hero />
             <InfoSection
-                primaryTheme
                 img={HomeInfo1.image}
                 title={HomeInfo1.title}
-                text={HomeInfo1.text}
+                // text={HomeInfo1.text}
+                bullets={HomeInfo1.bullets}
             />
         </HomeWrapper>
     )

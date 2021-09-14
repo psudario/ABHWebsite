@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 // Styled Components
@@ -27,10 +27,10 @@ const Navbar = ({props}) => {
     const [scrollTransparent, setScrollTransparent] = useState(true)
     window.onscroll = () =>{
         if(scrollTransparent){
-            if(window.scrollY >= 100) setScrollTransparent(false);
+            if(window.scrollY >= 1) setScrollTransparent(false);
         }
         else{
-            if(window.scrollY < 100) setScrollTransparent(true);
+            if(window.scrollY <= 0) setScrollTransparent(true);
         }
     }
 

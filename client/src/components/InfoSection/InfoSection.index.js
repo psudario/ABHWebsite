@@ -7,15 +7,17 @@ import {
     InfoSectionImg,
     InfoSectionTextWrapper,
     InfoSectionTitle,
-    InfoSectionSubtext
+    InfoSectionSubtext,
+    InfoSectionBullets,
+    InfoSectionBullet,
 } from './InfoSection.styles.js';
 
-import TestPicture from '../../static_files/jpg/HousePictures/913Victoria_FrontYard.jpg';
 
 
 const InfoSection = (props) => {
+
     return (
-        <InfoSectionWrapper>
+        <InfoSectionWrapper primaryTheme={props.primaryTheme} leftText={props.leftText}>
             <InfoSectionImgWrapper>
                 <InfoSectionImg src={props.img}/>
             </InfoSectionImgWrapper>
@@ -23,9 +25,17 @@ const InfoSection = (props) => {
                 <InfoSectionTitle>
                     {props.title}
                 </InfoSectionTitle>
-                <InfoSectionSubtext>
-                    {props.text}
-                </InfoSectionSubtext>
+                {props.bullets? 
+                    <InfoSectionBullets>
+                        {props.bullets.map(bullet => {
+                            return (<InfoSectionBullet>{bullet}</InfoSectionBullet>)
+                        })}
+                    </InfoSectionBullets>
+                    : 
+                    <InfoSectionSubtext>
+                        {props.text}
+                    </InfoSectionSubtext>
+                }
             </InfoSectionTextWrapper> 
         </InfoSectionWrapper>
     )
