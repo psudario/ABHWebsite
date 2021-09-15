@@ -13,7 +13,11 @@ const Mission = (props) => {
             textColor={props.textColor}
         >
             <MissionTitle>{props.title}</MissionTitle>
-            <MissionText>{props.text}</MissionText>
+            {props.text ?
+                props.text.map(paragraph => {
+                    return <MissionText>{paragraph}</MissionText>  
+                })
+            : null}
         </MissionWrapper>
     )
 }

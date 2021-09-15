@@ -20,4 +20,5 @@ export const MissionTitle = styled.h1`
 export const MissionText = styled.h3`
     max-width: 60vw;
     text-align: center;
+    padding-bottom: 2vh;
 `;

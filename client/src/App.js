@@ -14,10 +14,11 @@ import ResidentLife from './pages/ResidentLife/ResidentLife.index.js';
 import { Copyright } from './Data.js';
 
 const App = () => {
+
     return (
         <div>
             <BrowserRouter>
-                <Navbar/>
+                <Navbar />
                 <Switch>
                     <BrowserRoute path='/' exact component={Home}/>
                     <BrowserRoute path='/about' exact component={About}/>

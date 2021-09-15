@@ -14,16 +14,17 @@ const secondaryColor = "#a4ac9c";
 
 export const HeroData = {
     image:  HeroImg,
-    title:  "A Blessed Home",
-    text:   `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing tristique risus nec feugiat. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Sed nisi lacus sed viverra. Nisl condimentum id venenatis a condimentum vitae sapien. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Velit laoreet id donec ultrices. Egestas diam in arcu cursus euismod. Mi in nulla posuere sollicitudin aliquam ultrices sagittis. In vitae turpis massa sed elementum tempus egestas. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Vitae suscipit tellus mauris a. Sit amet nisl suscipit adipiscing bibendum est.
-            Volutpat consequat mauris nunc congue nisi vitae suscipit. Mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Nec ullamcorper sit amet risus nullam eget felis. Amet cursus sit amet dictum sit amet justo. Consequat semper viverra nam libero justo laoreet sit amet cursus. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Venenatis tellus in metus vulputate eu scelerisque. Et malesuada fames ac turpis egestas maecenas pharetra. Elit eget gravida cum sociis natoque penatibus et magnis. A scelerisque purus semper eget. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae.`,
-    
+    title:  "A Blessed Home",    
 }
 
 export const MissionData = {
-    title:  "Lorem Ipsum",
-    text:   `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing tristique risus nec feugiat. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Sed nisi lacus sed viverra. Nisl condimentum id venenatis a condimentum vitae sapien. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Velit laoreet id donec ultrices. Egestas diam in arcu cursus euismod. Mi in nulla posuere sollicitudin aliquam ultrices sagittis. In vitae turpis massa sed elementum tempus egestas. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Vitae suscipit tellus mauris a. Sit amet nisl suscipit adipiscing bibendum est.
-    Volutpat consequat mauris nunc congue nisi vitae suscipit. Mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Nec ullamcorper sit amet risus nullam eget felis. Amet cursus sit amet dictum sit amet justo. Consequat semper viverra nam libero justo laoreet sit amet cursus. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Venenatis tellus in metus vulputate eu scelerisque. Et malesuada fames ac turpis egestas maecenas pharetra. Elit eget gravida cum sociis natoque penatibus et magnis. A scelerisque purus semper eget. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae.`,
+    title: "Our Message To You",
+    text: [
+        'Welcome to our blessed home! We are a small facility, managed by nurses with over 25 years of acute hospital care experience.',
+        'We have taken every possible measure to ensure the comfort of our residents. From the location of the house, to the widening of our doorways, we are confident in our ability to increase our residents’ quality of life',
+        'We also have spacious living areas and large front and backyards where our residents are sure to enjoy indoor and outdoor activities.',
+        'Come and see us soon!'
+    ],
     textColor: primaryColor,
     backgroundColor: secondaryColor
 }
@@ -36,12 +37,16 @@ export const HomeInfo1 = {
 
 export const HomeInfo2 = {
     image: HomeInfo2Img,
-    title: 'Lorem Ipsum',
+    title: 'Amenities',
     bullets: [
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
-        'Lorem ipsum dolor sit amet',
+        '24/hr Resident Monitoring',
+        'Nutrition Management',
+        'Medication Administration',
+        'Assistance with ADL',
+        'Meals + Snacks',
+        'Cleaning + Laundry',
+        'Transportation',
+        'Entertainment/Recreation'
     ]
 };
 
@@ -49,16 +54,20 @@ export const Contact = {
     image: Logo,
     title: "Contact Information",
     bullets: [
-        "Address: 1234 StreetName Dr, City, State, 12345",
-        "Phone: (xxx)xxx-xxxx",
-        "Email: companyname@company.com",
+        "Address: 913 Victoria Dr, Richmond, TX, 77469",
+        "Phone: (713)382-1666",
+        "Email: ablessedhome8@gmail.com",
         "Operating Hours: Mon-Fri 8AM-6PM | Sat-Sun 12PM-4PM"
     ]
 }
 
 export const Copyright = {
-    text: "©2021 A Blessed Home, LLC. All rights reserved.",
-    socials: [['logo', 'link']]
+    text: "©2021 A BLESSED HOME, LLC. All rights reserved.",
+    socials: [
+        ['logo', 'link'],
+        ['logo', 'link'],
+        ['logo', 'link'],
+    ]
 }
 
 export const HomeBackgroundImages = {
@@ -68,4 +77,21 @@ export const HomeBackgroundImages = {
     bedroom: Bedroom
 };
 
+export const AboutSections = {
+    people:[
+        {
+            name: 'Remedios "Remy" Sudario',
+            image: Logo,
+            position: 'CEO | Co-Owner',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        },
+        {
+            name: 'Kim',
+            image: Logo,
+            position: 'Co-Owner',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 
+        }
+    ],
+
+}

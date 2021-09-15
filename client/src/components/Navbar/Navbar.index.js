@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 // Styled Components
@@ -25,6 +25,7 @@ const Navbar = ({props}) => {
 
     // Navbar Change on Scroll
     const [scrollTransparent, setScrollTransparent] = useState(true)
+    
     window.onscroll = () =>{
         if(scrollTransparent){
             if(window.scrollY >= 1) setScrollTransparent(false);
@@ -44,16 +45,21 @@ const Navbar = ({props}) => {
 
     }
 
+    // Scroll Function
+    const ScrollToTopFunc = () => {
+        window.scrollTo(0,0);
+    }
+
     // Hamburger Menu Open and Close function
 
 
 
     return (
         <NavbarWrapper scrollOpacity={scrollTransparent} currPage={page}>
-            <NavContentWrapper scrollOpacity={scrollTransparent}>
+            <NavContentWrapper scrollOpacity={scrollTransparent} currPage={page}>
                 <NavLeftWrapper>
                     <NavItem>
-                        <RouterLink to='/' onClick={() => setPage('home')} style={LinkStyles}>Home</RouterLink>
+                        <RouterLink to='/' onClick={() => {ScrollToTopFunc(); setPage('home')}} style={LinkStyles}>Home</RouterLink>
                     </NavItem>
                     <NavItem>
                         <RouterLink to='/about' onClick={() => setPage('about')} style={LinkStyles}>About Us </RouterLink>

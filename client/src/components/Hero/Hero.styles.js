@@ -20,8 +20,24 @@ const ScrollFadeAnimation = keyframes`
         opacity: 100%;
     }
 `;
+
+
+
 const Bounce = keyframes`
     0%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+
+    12%{
+        transform: translateY(-25px);
+    }
+
+    25%{
+        transform: translateY(0)
+    }
+
+    37%{
         transform: translateY(0);
     }
 
@@ -29,9 +45,24 @@ const Bounce = keyframes`
         transform: translateY(-25px);
     }
 
-    100%{
+    62%{
         transform: translateY(0)
     }
+
+    75%{
+        transform: translateY(0);
+    }
+
+    87%{
+        transform: translateY(-25px);
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+
 `;
 
 
@@ -48,8 +79,6 @@ export const HeroWrapper = styled.div`
 
     background-attachment: fixed;
 
-    /* height: 100vh;
-    background-color: grey; */
 
     display: flex;
     flex-direction: column;
@@ -62,46 +91,53 @@ export const HeroTextWrapper = styled.div`
     
 
     
-    animation: ${FadeInAnimation} 2.5s ease-in;
+    animation: ${FadeInAnimation} 2s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
     padding: 50px 100px;
-    border-radius: 25px;
+    border-radius: 1em;
     margin-bottom: 50px;
-    
-    background-color: rgba(219, 220, 225, 0.7);
-    /* rgb(219, 220, 225) */
-    box-shadow: 0 0 10px 1px black;
     
 `; 
 export const HeroMainText = styled.h1`
-    margin-bottom: 25px;
+    margin: 25px;
+    color: #3a3a3a;
+    font-size: 6em;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px #a4ac9c, -5px -5px 10px #a4ac9c;
 `;
 export const HeroCopyText = styled.h4`
-    width: 50vw;
+    max-width: 50vw;
+    color: #ffffff;
+    font-size: 2em;
+    text-shadow: 0 0 250px #ffffff;
 `;
 export const HeroFadeWrapper = styled.div`
-    animation: ${ScrollFadeAnimation} 15s ease ;
+    animation: ${ScrollFadeAnimation} 5s ease, ${Bounce} 5s ease 5s;
+    opacity: 0;
+
+    bottom: 0;
+    margin-bottom: 10px;
+    position: absolute;
+
 `;
 export const HeroScrollWrapper = styled.div`
     height: 12vh;
     width: 12vh;
 
-    animation: ${Bounce} 1s ease 15s;
+    
     animation-iteration-count: 10;
-    margin-bottom: 10px;
     padding: 20px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    position: absolute;
-    bottom: 0;
+    
+    
 
     background-color: rgba(219, 220, 225, 0.85);
     border-radius: 100%;

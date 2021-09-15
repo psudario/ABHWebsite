@@ -7,9 +7,10 @@ export const NavbarWrapper = styled.div`
     right: 0;
     padding-right: 10px;
     height: 12vh;
+    min-height: 115px;
     background-color: rgba(167, 171, 170, ${
         props => {
-            return props.scrollOpacity ? 0 : 1;
+            return (props.scrollOpacity && (props.currPage === "home")) ? 0 : 1;
         }
     });
 
@@ -20,14 +21,14 @@ export const NavbarWrapper = styled.div`
     z-index: 200;
 
     box-shadow: ${props => {
-        return props.scrollOpacity ? '0 0' : '0 0 10px' ;
+        return (props.scrollOpacity  && (props.currPage === "home")) ? '0 0' : '0 0 10px' ;
     }} black;
 
 
 `;
 export const NavContentWrapper = styled.div`
     display: ${props => {
-        return props.scrollOpacity ? 'none' : 'flex';
+        return (props.scrollOpacity  && (props.currPage === "home")) ? 'none' : 'flex';
     }};
     width: 100%;
     justify-content: space-between;

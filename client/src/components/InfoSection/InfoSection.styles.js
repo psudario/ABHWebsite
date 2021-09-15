@@ -42,7 +42,7 @@ export const InfoSectionImg = styled.div`
     height: 50vh;
     width: 50vh;
     border-radius: ${props => {return props.svg? 0 : '50%'}};
-    box-shadow: ${props => {return props.svg? '' : `0 0 5px 1px black`}};
+    box-shadow: ${props => {return props.svg? '' : `inset 0 0 5px 1px black`}};
 
 `;
 
@@ -72,5 +72,6 @@ export const InfoSectionBullet = styled.li`
     color: inherit;
     list-style: square;
     margin: 10px 0;
+    font-size: 1.3em;
 `;
 
