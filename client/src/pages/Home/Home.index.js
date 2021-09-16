@@ -42,6 +42,7 @@ const Home = (props) => {
                 image={HomePageData.HomeInfo1.image}
                 title={HomePageData.HomeInfo1.title}
                 text={HomePageData.HomeInfo1.text}
+                bullets={HomePageData.HomeInfo1.bullets}
             />
             <BackgroundImage
                 image={HomePageData.BackgroundImages.livingRoom}
@@ -50,6 +51,7 @@ const Home = (props) => {
                 leftText
                 image={HomePageData.HomeInfo2.image}
                 title={HomePageData.HomeInfo2.title}
+                text={HomePageData.HomeInfo2.text}
                 bullets={HomePageData.HomeInfo2.bullets}
             />
             <BackgroundImage

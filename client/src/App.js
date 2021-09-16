@@ -34,7 +34,7 @@ const App = () => {
                     <ResidentLife setLocation={setLocation}/>
                 </BrowserRoute>
             </Switch>
-            <Footer className="Footerasdasd"/>
+            <Footer />
         </BrowserRouter>
     )
 }
