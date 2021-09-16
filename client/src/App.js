@@ -21,23 +21,21 @@ const App = () => {
     }, [location]);
 
     return (
-        <div>
-            <BrowserRouter>
-                <Navbar location={location}/>
-                <Switch>
-                    <BrowserRoute path='/' exact>
-                        <Home setLocation={setLocation}/>
-                    </BrowserRoute>
-                    <BrowserRoute path='/about' exact>
-                        <About setLocation={setLocation}/>
-                    </BrowserRoute>
-                    <BrowserRoute path='/residentlife' exact>
-                        <ResidentLife setLocation={setLocation}/>
-                    </BrowserRoute>
-                </Switch>
-                <Footer/>
-            </BrowserRouter>
-        </div>
+        <BrowserRouter>
+            <Navbar location={location}/>
+            <Switch>
+                <BrowserRoute path='/' exact>
+                    <Home setLocation={setLocation}/>
+                </BrowserRoute>
+                <BrowserRoute path='/about' exact>
+                    <About setLocation={setLocation}/>
+                </BrowserRoute>
+                <BrowserRoute path='/residentlife' exact>
+                    <ResidentLife setLocation={setLocation}/>
+                </BrowserRoute>
+            </Switch>
+            <Footer className="Footerasdasd"/>
+        </BrowserRouter>
     )
 }
 

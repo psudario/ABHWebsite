@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink} from 'react-scroll';
 
 // Styled Components
 import {
@@ -69,9 +70,15 @@ const Navbar = (props) => {
                     <NavLogo src={Logo}/>
                 </NavLogoWrapper>
                 <NavRightWrapper>
-                    <NavItem>Contact</NavItem>
-                    <NavItem>Hours</NavItem>
-                    <NavItem>#</NavItem>
+                    <ScrollLink to="contact" smooth duration={1000}>
+                        <NavItem>Contact</NavItem>
+                    </ScrollLink>
+                    <ScrollLink to="contact" smooth duration={1000}>
+                        <NavItem>Hours</NavItem>  
+                    </ScrollLink>
+                    <ScrollLink to="contact" smooth duration={1000}>
+                        <NavItem>#</NavItem>
+                    </ScrollLink>
                 </NavRightWrapper>
             
             </NavContentWrapper>

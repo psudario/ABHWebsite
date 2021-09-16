@@ -9,10 +9,6 @@ export const FooterWrapper = styled.div`
     box-shadow: 0 0 2px 0px black;
 `;
 
-export const InfoWrapper = styled.div`
-
-`;
-
 export const SocialMedia = styled.div``;
 export const SocialIcon = styled.a``;
 

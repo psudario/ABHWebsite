@@ -3,7 +3,6 @@ import React from 'react'
 // Styled Components
 import {
     FooterWrapper,
-    InfoWrapper,
     SocialMedia,
     SocialIcon,
     CopyrightWrapper,
@@ -21,12 +20,14 @@ import { FooterData } from '../../Data.js';
 const Footer = () => {
     return (
         <FooterWrapper>
-            <InfoSection 
-                svg
-                image={FooterData.contact.image}
-                title={FooterData.contact.title}
-                bullets={FooterData.contact.bullets}
-            />
+                <div id="contact">
+                <InfoSection 
+                    svg
+                    image={FooterData.contact.image}
+                    title={FooterData.contact.title}
+                    bullets={FooterData.contact.bullets}
+                />
+                </div>
             <SocialMedia>
                 <SocialIcon src={null}/>
                 <SocialIcon src={null}/>
