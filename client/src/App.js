@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useState, useEffect } from 'react';
 import {BrowserRouter, Switch, Route as BrowserRoute} from 'react-router-dom';
 
 // Components
@@ -11,20 +11,31 @@ import About from './pages/About/About.index.js';
 import ResidentLife from './pages/ResidentLife/ResidentLife.index.js';
 
 // Data
-import { Copyright } from './Data.js';
 
 const App = () => {
+
+    const [location, setLocation] = useState('home');
+
+    useEffect(() => {
+        console.log(`Current Page = ${location}`);
+    }, [location]);
 
     return (
         <div>
             <BrowserRouter>
-                <Navbar />
+                <Navbar location={location}/>
                 <Switch>
-                    <BrowserRoute path='/' exact component={Home}/>
-                    <BrowserRoute path='/about' exact component={About}/>
-                    <BrowserRoute path='/residentlife' exact component={ResidentLife}/>
+                    <BrowserRoute path='/' exact>
+                        <Home setLocation={setLocation}/>
+                    </BrowserRoute>
+                    <BrowserRoute path='/about' exact>
+                        <About setLocation={setLocation}/>
+                    </BrowserRoute>
+                    <BrowserRoute path='/residentlife' exact>
+                        <ResidentLife setLocation={setLocation}/>
+                    </BrowserRoute>
                 </Switch>
-                <Footer text={Copyright.text}/>
+                <Footer/>
             </BrowserRouter>
         </div>
     )

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 // Styled Components
@@ -21,7 +21,7 @@ import Logo from '../../static_files/png/ABHLogo.png';
 
 
 
-const Navbar = ({props}) => {
+const Navbar = (props) => {
 
     // Navbar Change on Scroll
     const [scrollTransparent, setScrollTransparent] = useState(true)
@@ -34,9 +34,6 @@ const Navbar = ({props}) => {
             if(window.scrollY <= 0) setScrollTransparent(true);
         }
     }
-
-    // Manage State for new page
-    const [page, setPage] = useState('home')
 
     // Link Styles
     const LinkStyles = {
@@ -55,17 +52,17 @@ const Navbar = ({props}) => {
 
 
     return (
-        <NavbarWrapper scrollOpacity={scrollTransparent} currPage={page}>
-            <NavContentWrapper scrollOpacity={scrollTransparent} currPage={page}>
+        <NavbarWrapper scrollOpacity={scrollTransparent} currPage={props.location}>
+            <NavContentWrapper scrollOpacity={scrollTransparent} currPage={props.location}>
                 <NavLeftWrapper>
                     <NavItem>
-                        <RouterLink to='/' onClick={() => {ScrollToTopFunc(); setPage('home')}} style={LinkStyles}>Home</RouterLink>
+                        <RouterLink to='/' onClick={() => ScrollToTopFunc()} style={LinkStyles}>Home</RouterLink>
                     </NavItem>
                     <NavItem>
-                        <RouterLink to='/about' onClick={() => setPage('about')} style={LinkStyles}>About Us </RouterLink>
+                        <RouterLink to='/about' onClick={() => ScrollToTopFunc()} style={LinkStyles}>About Us </RouterLink>
                     </NavItem>
                     <NavItem>
-                        <RouterLink to='/ResidentLife' onClick={() => setPage('residentlife')} style={LinkStyles}>Resident Life </RouterLink>
+                        <RouterLink to='/ResidentLife' onClick={() => ScrollToTopFunc()} style={LinkStyles}>Resident Life </RouterLink>
                     </NavItem>
                 </NavLeftWrapper>
                 <NavLogoWrapper>

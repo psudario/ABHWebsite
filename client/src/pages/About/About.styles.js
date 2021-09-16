@@ -5,13 +5,14 @@ export const AboutPageWrapper = styled.div`
     padding-top: 12vh;
     display: flex;
     justify-content: center;
-    background-color: #a4ac9c;
+    /* background-color: #28343D; */
+    background-color: #666F75;
 `;
 
 export const AboutContentWrapper = styled.div`
     width: 60vw;
     background-color: #fafafa;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 2px black, inset 0 0 2px black;
     padding-bottom: 100px;
 `;
 

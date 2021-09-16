@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import {
     AboutPageWrapper,
@@ -17,13 +17,12 @@ import {
 } from './About.styles.js';
 
 // Data
-import { AboutSections } from '../../Data.js';
-import picture from '../../static_files/jpg/InfoSectionImages/TeaCup.jpg';
+import { AboutPageData } from '../../Data.js';
 
 
 // Custom components
 const AboutSection = (props) => {
-    
+
     return(
         <AboutSectionWrapper>
             <AboutSectionName>
@@ -43,12 +42,16 @@ const AboutSection = (props) => {
 }
 
 
-const About = () => {
+const About = (props) => {
+
+    useEffect(()=>{
+        props.setLocation('about');
+    });
 
     return (
         <AboutPageWrapper>
             <AboutContentWrapper>
-                {AboutSections.people.map(person => {
+                {AboutPageData.people.map(person => {
                     return(
                         <AboutSection
                             name={person.name}
@@ -59,14 +62,19 @@ const About = () => {
                     );
                 })}
 
-                <AboutHeadingWrapper>
-                    <AboutTitle>
-                        About Us!
-                    </AboutTitle>
-                    <AboutMessage>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </AboutMessage>
-                </AboutHeadingWrapper>
+                {AboutPageData.textSections.map((section) => {
+                    return(
+                        <AboutHeadingWrapper>
+                            <AboutTitle>
+                                {section.title}
+                            </AboutTitle>
+                            <AboutMessage>
+                                {section.text}
+                            </AboutMessage>
+                        </AboutHeadingWrapper>
+                    );
+                })}
+
             </AboutContentWrapper>
         </AboutPageWrapper>
     )

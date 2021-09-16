@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // Custom Components
 import Hero from '../../components/Hero/Hero.index.js';
@@ -12,56 +12,48 @@ import {
 } from './Home.styles.js';
 
 // Data
-import {
-    HeroData,
-    MissionData,
-    HomeInfo1,
-    HomeInfo2,
-    Contact,
-    HomeBackgroundImages
-} from '../../Data.js';
+import { HomePageData } from '../../Data.js';
 
 
 
-const Home = () => {
+const Home = (props) => {
+
+    useEffect(() => {
+        props.setLocation('home');
+    });
+
     return (
         <HomeWrapper>
             <Hero
-                image={HeroData.image}
-                title={HeroData.title}
-                text={HeroData.text}
+                image={HomePageData.HeroData.image}
+                title={HomePageData.HeroData.title}
+                text={HomePageData.HeroData.text}
             />
             <Mission
-                title={MissionData.title}
-                text={MissionData.text}
-                backgroundColor={MissionData.backgroundColor}
-                textColor={MissionData.textColor}
+                title={HomePageData.MissionData.title}
+                text={HomePageData.MissionData.text}
+                backgroundColor={HomePageData.MissionData.backgroundColor}
+                textColor={HomePageData.MissionData.textColor}
             />
             <BackgroundImage
-                image={HomeBackgroundImages.kitchen}
+                image={HomePageData.BackgroundImages.kitchen}
             />
             <InfoSection
-                image={HomeInfo1.image}
-                title={HomeInfo1.title}
-                text={HomeInfo1.text}
+                image={HomePageData.HomeInfo1.image}
+                title={HomePageData.HomeInfo1.title}
+                text={HomePageData.HomeInfo1.text}
             />
             <BackgroundImage
-                image={HomeBackgroundImages.livingRoom}
+                image={HomePageData.BackgroundImages.livingRoom}
             />
             <InfoSection 
                 leftText
-                image={HomeInfo2.image}
-                title={HomeInfo2.title}
-                bullets={HomeInfo2.bullets}
+                image={HomePageData.HomeInfo2.image}
+                title={HomePageData.HomeInfo2.title}
+                bullets={HomePageData.HomeInfo2.bullets}
             />
             <BackgroundImage
-                image={HomeBackgroundImages.bedroom}
-            />
-            <InfoSection 
-                svg
-                image={Contact.image}
-                title={Contact.title}
-                bullets={Contact.bullets}
+                image={HomePageData.BackgroundImages.bedroom}
             />
         </HomeWrapper>
     )
