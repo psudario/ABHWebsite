@@ -116,12 +116,13 @@ export const HeroCopyText = styled.h4`
     text-shadow: 0 0 250px #ffffff;
 `;
 export const HeroFadeWrapper = styled.div`
-    animation: ${ScrollFadeAnimation} 5s ease, ${Bounce} 5s ease 5s;
+    animation: ${ScrollFadeAnimation} 2s ease, ${Bounce} 2s ease 2s;
     opacity: 0;
 
     bottom: 0;
     margin-bottom: 10px;
     position: absolute;
+    z-index:1;
 
 `;
 export const HeroScrollWrapper = styled.div`

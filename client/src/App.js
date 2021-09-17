@@ -15,11 +15,15 @@ import ResidentLife from './pages/ResidentLife/ResidentLife.index.js';
 const App = () => {
 
     const [location, setLocation] = useState('home');
-
+    const [burgerClicked, setBurgerClicked] = useState(true);
 
     return (
         <BrowserRouter>
-            <Navbar location={location}/>
+            <Navbar
+                location={location}
+                burgerClicked={burgerClicked}
+                setBurgerClicked={setBurgerClicked}
+            />
             <Switch>
                 <BrowserRoute path='/' exact>
                     <Home setLocation={setLocation}/>

@@ -6,13 +6,16 @@ import { Link as ScrollLink} from 'react-scroll';
 import {
     NavbarWrapper,
     NavContentWrapper,
-    NavLeftWrapper,
+    
     NavItem,
+    NavItemWrapper,
+
+    MobileLogoWrapper,
     NavLogoWrapper,
-    NavRightWrapper,
+    NavLogo,
+
     Burger,
-    BurgerLine,
-    NavLogo
+    BurgerLine
 } from './Navbar.styles.js';
 
 // Static Files
@@ -54,41 +57,72 @@ const Navbar = (props) => {
 
     return (
         <NavbarWrapper scrollOpacity={scrollTransparent} currPage={props.location}>
-            <NavContentWrapper scrollOpacity={scrollTransparent} currPage={props.location}>
-                <NavLeftWrapper>
+            <MobileLogoWrapper scrollOpacity={scrollTransparent} currPage={props.location}>
+                <NavLogo src={Logo} />
+            </MobileLogoWrapper>
+            <NavContentWrapper
+                scrollOpacity={scrollTransparent}
+                currPage={props.location}
+                burgerClicked={props.burgerClicked}
+            >
+                <NavItemWrapper>
                     <NavItem>
-                        <RouterLink to='/' onClick={() => ScrollToTopFunc()} style={LinkStyles}>Home</RouterLink>
+                        <RouterLink
+                            to='/'
+                            onClick={() => {
+                                props.setBurgerClicked(false);
+                                ScrollToTopFunc();
+                            }}
+                            style={LinkStyles}
+                        >Home</RouterLink>
                     </NavItem>
                     <NavItem>
-                        <RouterLink to='/about' onClick={() => ScrollToTopFunc()} style={LinkStyles}>About Us </RouterLink>
+                        <RouterLink
+                            to='/about'
+                            onClick={() => {
+                                props.setBurgerClicked(false);
+                                ScrollToTopFunc();
+                            }}
+                            style={LinkStyles}
+                        >About Us </RouterLink>
                     </NavItem>
                     <NavItem>
-                        <RouterLink to='/ResidentLife' onClick={() => ScrollToTopFunc()} style={LinkStyles}>Resident Life </RouterLink>
+                        <RouterLink
+                            to='/ResidentLife'
+                            onClick={() => {
+                                props.setBurgerClicked(false);
+                                ScrollToTopFunc();
+                            }}
+                            style={LinkStyles}
+                        >Resident Life </RouterLink>
                     </NavItem>
-                </NavLeftWrapper>
+                </NavItemWrapper>
                 <NavLogoWrapper>
                     <NavLogo src={Logo}/>
                 </NavLogoWrapper>
-                <NavRightWrapper>
+                <NavItemWrapper>
                     <ScrollLink to="contact" smooth duration={1000}>
-                        <NavItem>Contact</NavItem>
+                        <NavItem
+                            onClick={()=>props.setBurgerClicked(false)}
+                        >Contact</NavItem>
                     </ScrollLink>
                     <ScrollLink to="contact" smooth duration={1000}>
-                        <NavItem>Hours</NavItem>  
+                        <NavItem
+                            onClick={()=>props.setBurgerClicked(false)}
+                        >Hours</NavItem>  
                     </ScrollLink>
                     <ScrollLink to="contact" smooth duration={1000}>
-                        <NavItem>#</NavItem>
+                        <NavItem
+                            onClick={()=>props.setBurgerClicked(false)}
+                        >#</NavItem>
                     </ScrollLink>
-                </NavRightWrapper>
-            
+                </NavItemWrapper>
             </NavContentWrapper>
-
-            <Burger>
-                <BurgerLine></BurgerLine>
-                <BurgerLine></BurgerLine>
-                <BurgerLine></BurgerLine>
+            <Burger onClick={()=>props.setBurgerClicked(!props.burgerClicked)}>
+                <BurgerLine />
+                <BurgerLine />
+                <BurgerLine />
             </Burger>
-
         </NavbarWrapper>
     )
 }

@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export const NavbarWrapper = styled.div`
+    
+    display: flex;
+    align-items: center;
     position: fixed;
-    left: 0;
+    width: 100%;
     padding-left: 10px;
-    right: 0;
     padding-right: 10px;
     height: 12vh;
     min-height: 115px;
@@ -14,18 +16,28 @@ export const NavbarWrapper = styled.div`
         }
     });
 
-    align-items: center;
     transition: all 300ms ease;
-    /* color: #4C4E4F; */
     color: #3a3a3a;
-    z-index: 200;
 
     box-shadow: ${props => {
         return (props.scrollOpacity  && (props.currPage === "home")) ? '0 0' : '0 0 10px' ;
     }} black;
 
+    
+
 
 `;
+
+export const MobileLogoWrapper = styled.div`
+    display: none;
+
+    @media (max-width: 976px){
+        display: ${props => {
+            return (props.scrollOpacity  && (props.currPage === "home")) ? 'none' : 'block';
+        }};
+    }
+`;
+
 export const NavContentWrapper = styled.div`
     display: ${props => {
         return (props.scrollOpacity  && (props.currPage === "home")) ? 'none' : 'flex';
@@ -34,46 +46,47 @@ export const NavContentWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     color: inherit;
+    z-index: 1000;
 
-    @media (max-width: 978px){
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-    }
-`;
-export const NavLeftWrapper = styled.div`
-    display: flex;
-    justify-content: space-around;
-    width: 33%;
-    background-color: inherit;
+    transition: transform 300ms ease;
 
-    @media (max-width: 978px){
-        
+    @media (max-width: 976px){
+        width: 50%;
         position: absolute;
+        top: 12vh;
         right: 0px;
         height: 88vh;
-        width: 80vw;
-        top: 12vh;
-        background: grey;
-
-        display: flex;
+        padding-bottom: 40vh;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height: 100%;
-        padding: 25px;
-        padding-bottom: 70vh;
-        transform: translateX(0%); 
-        box-shadow: -22px -2px black;
+        background-color: rgba(167, 171, 170);
+        box-shadow : inset 0 0 5px black, 0 0 1px black;
+        transform : ${props => {
+            return (props.burgerClicked) ? 'translateX(0)' : 'translateX(100%)';
+        }}
     }
 
 `;
+export const NavItemWrapper = styled.div`
+    display: flex;
+    justify-content: space-around;
+    width: 33%;
+
+    @media (max-width: 976px){
+        flex-direction: column;
+        
+    }
+
+`;
+
 export const NavItem = styled.h2`
     cursor: pointer;
     background-color: inherit;
     color: inherit;
     text-decoration: none;
     transition: all 300ms ease;
+    margin: 5px;
     
     
     &:hover{
@@ -83,37 +96,39 @@ export const NavItem = styled.h2`
         transition: all 300ms ease;
     }
 `;
-export const NavRightWrapper = styled.div`
-    display: flex;
-    justify-content: space-around;
-    width: 33%;
-    @media (max-width: 978px){
-        display: none;
-    }
-`;
 export const NavLogoWrapper = styled.div`
-    width: 33%;
+    /* width: 33%; */
     display: flex;
     justify-content: center;
     padding: 5px;
 
-    @media (max-width: 978px){
-        order: -1;
+    @media (max-width: 976px){
+        display: none;
     }
 `;
 export const NavLogo = styled.img`
     max-height: 10vh;
 `;
 
+
 export const Burger = styled.div`
     display: none;
 
-    @media (max-width: 978px){
-        display: block;
+    @media (max-width: 976px){
+        cursor: pointer;
+        position: absolute;
+        right: 2em;
+        display: ${props => {
+            
+            return (
+                props.scrollOpacity && (props.currPage === 'home')) ? 
+                'none' : 'block'
+            }};
+        
     }
 `;
 export const BurgerLine = styled.div`
-    background-color: brown;
+    background-color: #3a3a3a;
     width: 20px;
     height: 3px;
     margin: 2px 0px;
