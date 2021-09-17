@@ -28,6 +28,9 @@ const App = () => {
                 <BrowserRoute path='/' exact>
                     <Home setLocation={setLocation}/>
                 </BrowserRoute>
+                <BrowserRoute path='/ABHWebsite' exact>
+                    <Home setLocation={setLocation}/>
+                </BrowserRoute>
                 <BrowserRoute path='/about' exact>
                     <About setLocation={setLocation}/>
                 </BrowserRoute>
