@@ -10,6 +10,7 @@ export const MissionWrapper = styled.div`
     color: ${props => {return props.textColor}};
 
     width: 100vw;
+    max-width: 100%;
     min-height: 50vh;
     
 `;

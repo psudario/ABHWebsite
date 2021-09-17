@@ -72,6 +72,7 @@ export const HeroWrapper = styled.div`
     
     height: 100vh;
     width: 100vw;
+    max-width: 100%;
     
     background-position: center;
     background-repeat: no-repeat;
@@ -100,6 +101,10 @@ export const HeroTextWrapper = styled.div`
     padding: 50px 100px;
     border-radius: 1em;
     margin-bottom: 50px;
+
+    @media (max-width: 768px){
+        padding: 0;
+    }
     
 `; 
 export const HeroMainText = styled.h1`

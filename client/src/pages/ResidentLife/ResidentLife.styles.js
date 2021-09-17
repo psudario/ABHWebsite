@@ -15,7 +15,7 @@ export const PageWrapper = styled.div`
     box-shadow: 0 0 10px black;
     
     @media (max-width: 768px){
-        max-width: 100vw;
+        max-width: 100%;
     }
 `;
 export const PageHeading = styled.div`

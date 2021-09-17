@@ -7,6 +7,8 @@ const secondaryColor = "#a4ac9c";
 export const InfoSectionWrapper = styled.div`
 
     min-height: 60vh;
+    width: 100vw;
+    max-width: 100%;
     background-color: ${props => {
         return props.primaryTheme? primaryColor : secondaryColor;
     }};
@@ -87,7 +89,7 @@ export const InfoSectionSubtext = styled.h3`
     text-align: center;
 
     @media (max-width: 976px){
-        max-width: 100vw;
+        max-width: 100%;
     }
     
 `;

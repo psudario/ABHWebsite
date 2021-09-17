@@ -6,6 +6,7 @@ export const NavbarWrapper = styled.div`
     align-items: center;
     position: fixed;
     width: 100vw;
+    max-width: 100%;
     padding-left: 10px;
     padding-right: 10px;
     height: 12vh;
@@ -24,7 +25,7 @@ export const NavbarWrapper = styled.div`
     }} black;
 
     
-
+    
 
 `;
 
@@ -42,7 +43,7 @@ export const NavContentWrapper = styled.div`
     display: ${props => {
         return (props.scrollOpacity  && (props.currPage === "home")) ? 'none' : 'flex';
     }};
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     color: inherit;
@@ -51,6 +52,7 @@ export const NavContentWrapper = styled.div`
     transition: transform 300ms ease;
 
     @media (max-width: 976px){
+        /* display: none; */
         width: 50%;
         min-width: 360px;
         position: absolute;

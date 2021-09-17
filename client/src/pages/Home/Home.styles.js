@@ -7,6 +7,8 @@ export const HomeWrapper = styled.div`
 export const BackgroundImage = styled.div`
     height: 50vh;
 
+    width: 100vw;
+    max-width: 100%;
     background-image: url(${props => {return props.image}});
     background-position: center;
     background-repeat: no-repeat;

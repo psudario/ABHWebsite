@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const FooterWrapper = styled.div`
     background-color: #8a8e8c;
+    width: 100vw;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
