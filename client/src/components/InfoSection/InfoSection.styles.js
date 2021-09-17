@@ -87,7 +87,7 @@ export const InfoSectionSubtext = styled.h3`
     text-align: center;
 
     @media (max-width: 976px){
-        max-width: 100%
+        max-width: 100vw;
     }
     
 `;

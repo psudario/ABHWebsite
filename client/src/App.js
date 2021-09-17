@@ -28,7 +28,7 @@ const App = () => {
                 <BrowserRoute path='/' exact>
                     <Home setLocation={setLocation}/>
                 </BrowserRoute>
-                <BrowserRoute path='/ABHWebsite' exact>
+                <BrowserRoute path='/ABHWebsite/' exact>
                     <Home setLocation={setLocation}/>
                 </BrowserRoute>
                 <BrowserRoute path='/about' exact>

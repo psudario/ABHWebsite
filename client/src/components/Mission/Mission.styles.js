@@ -9,7 +9,7 @@ export const MissionWrapper = styled.div`
     background-color: ${props => {return props.backgroundColor}};
     color: ${props => {return props.textColor}};
 
-    width: 100%;
+    width: 100vw;
     min-height: 50vh;
     
 `;

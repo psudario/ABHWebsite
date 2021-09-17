@@ -5,7 +5,7 @@ export const NavbarWrapper = styled.div`
     display: flex;
     align-items: center;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     padding-left: 10px;
     padding-right: 10px;
     height: 12vh;
@@ -42,7 +42,7 @@ export const NavContentWrapper = styled.div`
     display: ${props => {
         return (props.scrollOpacity  && (props.currPage === "home")) ? 'none' : 'flex';
     }};
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     align-items: center;
     color: inherit;

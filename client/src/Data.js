@@ -128,10 +128,10 @@ export const ResidentLifeData = {
             image: FamilySvg,
             text: 'Come visit your family during our visiting hours. We can accomodate you and your family in our spacious facility.',
             bullets: [
-                '-Due to covid, we request that visitors schedule appointments via call, text, or email at least 24 hrs prior.',
-                '-Call or text for any questions.',
-                '-Visitation Hours: 10am-6pm',
-                '-Office Hours: 8am-5pm',
+                'Due to covid, we request that visitors schedule appointments via call, text, or email at least 24 hrs prior.',
+                'Call or text for any questions.',
+                'Visitation Hours: 10am-6pm',
+                'Office Hours: 8am-5pm',
             ]
 
         },

@@ -71,7 +71,7 @@ export const HeroWrapper = styled.div`
     background-image: url(${props => {return props.backgroundImage}});
     
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     
     background-position: center;
     background-repeat: no-repeat;
