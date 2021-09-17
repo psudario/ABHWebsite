@@ -15,7 +15,7 @@ import ResidentLife from './pages/ResidentLife/ResidentLife.index.js';
 const App = () => {
 
     const [location, setLocation] = useState('home');
-    const [burgerClicked, setBurgerClicked] = useState(true);
+    const [burgerClicked, setBurgerClicked] = useState(false);
 
     return (
         <BrowserRouter>

@@ -52,6 +52,7 @@ export const NavContentWrapper = styled.div`
 
     @media (max-width: 976px){
         width: 50%;
+        min-width: 360px;
         position: absolute;
         top: 12vh;
         right: 0px;
@@ -97,8 +98,7 @@ export const NavItem = styled.h2`
     }
 `;
 export const NavLogoWrapper = styled.div`
-    /* width: 33%; */
-    display: flex;
+        display: flex;
     justify-content: center;
     padding: 5px;
 
@@ -119,12 +119,10 @@ export const Burger = styled.div`
         position: absolute;
         right: 2em;
         display: ${props => {
-            
             return (
                 props.scrollOpacity && (props.currPage === 'home')) ? 
                 'none' : 'block'
             }};
-        
     }
 `;
 export const BurgerLine = styled.div`

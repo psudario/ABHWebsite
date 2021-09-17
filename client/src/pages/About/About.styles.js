@@ -14,6 +14,10 @@ export const AboutContentWrapper = styled.div`
     background-color: #fafafa;
     box-shadow: 0 0 2px black, inset 0 0 2px black;
     padding-bottom: 100px;
+
+    @media (max-width: 768px){
+        width: 100vw;
+    }
 `;
 
 export const AboutHeadingWrapper = styled.div`
@@ -44,6 +48,13 @@ export const AboutSectionWrapper = styled.div`
     "text image";
 
     grid-gap: 1em;
+
+    @media (max-width: 768px){
+        grid-template-areas: 
+            "name image"
+            "title image"
+            "text text";
+    }
 `;
 export const AboutSectionName = styled.h1`
     grid-area: name;
@@ -64,9 +75,14 @@ export const AboutSectionImg = styled.div`
     box-shadow: 0 0 5px black, inset 0 0 5px black;
 
 
-    height: 35vh;
-    width: 35vh;
+    height: 25vw;
+    width: 25vw;
     border-radius: 50%;
+
+    @media (max-width: 768px){
+        height: 25vw;
+        width: 25vw;
+    }
     
 
 `;

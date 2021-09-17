@@ -15,6 +15,7 @@ export const MissionWrapper = styled.div`
 `;
 
 export const MissionTitle = styled.h1`
+    margin-top: 25px;
     padding-bottom: 20px;
 `;
 export const MissionText = styled.h3`

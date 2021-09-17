@@ -6,7 +6,7 @@ const secondaryColor = "#a4ac9c";
 
 export const InfoSectionWrapper = styled.div`
 
-    height: 60vh;
+    min-height: 60vh;
     background-color: ${props => {
         return props.primaryTheme? primaryColor : secondaryColor;
     }};
@@ -18,17 +18,31 @@ export const InfoSectionWrapper = styled.div`
     grid-template-columns: 50% 50%;
     grid-template-areas: ${props => {
         return props.leftText ? 
-        `"col2 col1"`
+        `
+        "title image"
+        "text image"
+        `
         : 
-        `"col1 col2"`; 
+        `
+        "image title"
+        "image text"
+        `; 
     }};
+
+    @media (max-width: 976px){
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "image"
+            "title"
+            "text";
+    }
 
 `;
 
 
 
 export const InfoSectionImgWrapper = styled.div`
-    grid-area: col1;
+    grid-area: image;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,33 +53,45 @@ export const InfoSectionImg = styled.div`
     background-position: center;
     background-size: ${props => {return props.svg? 'contain' : 'cover'}};
     background-repeat: no-repeat;
-    height: 50vh;
-    width: 50vh;
+    height: 50vw;
+    width: 50vw;
+    margin: 10px;
     border-radius: ${props => {return props.svg? 0 : '50%'}};
     box-shadow: ${props => {return props.svg? '' : `inset 0 0 5px 1px black`}};
 
 `;
 
-
-
-export const InfoSectionTextWrapper = styled.div`
-    grid-area: col2;
+export const InfoSectionTitleWrapper = styled.div`
+    
+    grid-area: title;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-
 `;
 export const InfoSectionTitle = styled.h1`
     margin: 25px;
+`;
+
+export const InfoSectionTextWrapper = styled.div`
+    grid-area: text;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    margin-bottom: 30px;
 `;
 export const InfoSectionSubtext = styled.h3`
     max-width: 30vw;
     padding: 10px;
     text-align: center;
+
+    @media (max-width: 976px){
+        max-width: 100%
+    }
+    
 `;
-export const InfoSectionBullets = styled.ul``;
+export const InfoSectionBullets = styled.ul`
+    padding-left: 2em;
+`;
 export const InfoSectionBullet = styled.li`
     display: list-item;
     margin-bottom: 50px;

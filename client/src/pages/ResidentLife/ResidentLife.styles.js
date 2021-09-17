@@ -13,6 +13,10 @@ export const PageWrapper = styled.div`
     padding: 25px 50px;
     min-height: 100vh;
     box-shadow: 0 0 10px black;
+    
+    @media (max-width: 768px){
+        max-width: 100vw;
+    }
 `;
 export const PageHeading = styled.div`
     display: flex;
@@ -75,7 +79,7 @@ export const SectionText = styled.p`
 `;
 export const SectionBullets = styled.ul`
     grid-area: bullet;
-    list-style: none;
+    padding-left: 1em;
 `;
 export const SectionBullet = styled.li`
     margin-bottom: 10px;

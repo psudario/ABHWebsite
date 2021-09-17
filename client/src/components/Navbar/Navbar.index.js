@@ -118,7 +118,11 @@ const Navbar = (props) => {
                     </ScrollLink>
                 </NavItemWrapper>
             </NavContentWrapper>
-            <Burger onClick={()=>props.setBurgerClicked(!props.burgerClicked)}>
+            <Burger 
+                scrollOpacity={scrollTransparent}
+                currPage={props.location}
+                onClick={()=>props.setBurgerClicked(!props.burgerClicked)}
+            >
                 <BurgerLine />
                 <BurgerLine />
                 <BurgerLine />

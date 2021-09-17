@@ -6,6 +6,7 @@ import {
     InfoSectionImgWrapper,
     InfoSectionImg,
     InfoSectionTextWrapper,
+    InfoSectionTitleWrapper,
     InfoSectionTitle,
     InfoSectionSubtext,
     InfoSectionBullets,
@@ -21,10 +22,12 @@ const InfoSection = (props) => {
             <InfoSectionImgWrapper>
                 <InfoSectionImg svg={props.svg} image={props.image}/>
             </InfoSectionImgWrapper>
-            <InfoSectionTextWrapper>
+            <InfoSectionTitleWrapper>
                 <InfoSectionTitle>
                     {props.title}
                 </InfoSectionTitle>
+            </InfoSectionTitleWrapper>
+            <InfoSectionTextWrapper>
                 {props.bullets? 
                     <InfoSectionBullets>
                         {props.bullets.map(bullet => {
@@ -36,7 +39,7 @@ const InfoSection = (props) => {
                         {props.text}
                     </InfoSectionSubtext>
                 }
-            </InfoSectionTextWrapper> 
+            </InfoSectionTextWrapper>
         </InfoSectionWrapper>
     )
 }
