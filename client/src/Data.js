@@ -6,6 +6,10 @@ import HeroImg from './static_files/jpg/BackgroundImages/913Victoria_FrontYard.j
 import Kitchen from './static_files/jpg/BackgroundImages/KitchenPicture.jpg';
 import LivingRoom from './static_files/jpg/BackgroundImages/LivingRoom.jpg';
 import Bedroom from './static_files/jpg/BackgroundImages/Bedroom.jpg';
+import Landscape from './static_files/svg/bavaria.svg';
+import FamilySvg from './static_files/svg/family.svg';
+import HouseSvg from './static_files/svg/houseSvg.svg';
+
 
 // Colors
 const primaryColor = "#3a3a3a";
@@ -90,14 +94,48 @@ export const ResidentLifeData = {
     },
     sections: [
         {
-            title: 'null',
-            text: 'null',
+            title: 'Services Provided',
+            image: HouseSvg,
+            text: 'We take pride in being able to provide you and your loved ones with what they need.',
             bullets: [
-                'null',
-                'null',
-                'null',
+                '-24/hr Resident Monitoring',
+                '-Nutrition Management',
+                '-Medication Administration',
+                '-Assistance with ADL’s',
+                '-Meals + Snacks',
+                '-Cleaning + Laundry',
+                '-Transportation',
+                '-Entertainment/Recreation',
             ]
-        }
+        },
+        {
+            title: 'Location',
+            image: Landscape,
+            text: 'We are located in a small and quiet neighborhood close to everything you would need!',
+            bullets: [
+                '-We are located in a small and quiet neighborhood',
+                '-2 minutes from OakBend Medical Center',
+                '-3 minutes from Fort Bend Dental',
+                '-8 minutes from 2 dialysis centers',
+                '-5 minutes from George Memorial Library',
+                '-5 minutes from Wessendorff Park and Clay Park',
+                '-Less than 10 minutes from Baptist, Catholic, and Methodist Churches',
+                '-15 minutes from First Colony Mall',
+            ]
+        },
+        {
+            title: 'Visitation Policies',
+            image: FamilySvg,
+            text: 'Come visit your family during our visiting hours. We can accomodate you and your family in our spacious facility.',
+            bullets: [
+                '-Due to covid, we request that visitors schedule appointments via call, text, or email at least 24 hrs prior.',
+                '-Call or text for any questions.',
+                '-Visitation Hours: 10am-6pm',
+                '-Office Hours: 8am-5pm',
+            ]
+
+        },
+        
         
     ]
 };

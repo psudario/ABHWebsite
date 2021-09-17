@@ -1,4 +1,4 @@
-import React , { useState, useEffect } from 'react';
+import React , { useState} from 'react';
 import {BrowserRouter, Switch, Route as BrowserRoute} from 'react-router-dom';
 
 // Components
@@ -16,9 +16,6 @@ const App = () => {
 
     const [location, setLocation] = useState('home');
 
-    useEffect(() => {
-        console.log(`Current Page = ${location}`);
-    }, [location]);
 
     return (
         <BrowserRouter>

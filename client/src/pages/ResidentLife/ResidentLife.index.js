@@ -5,11 +5,13 @@ import {
     BackgroundWrapper,
     PageWrapper,
     PageHeading,
+    TitleWrapper,
     MainTitle,
     MainText,
     SectionWrapper,
     SectionTitle,
     SectionText,
+    SectionImg,
     SectionBullets,
     SectionBullet,
 } from './ResidentLife.styles.js';
@@ -17,7 +19,6 @@ import {
 
 // Data
 import { ResidentLifeData } from '../../Data.js';
-
 
 const ResidentLife = (props) => {
 
@@ -36,12 +37,15 @@ const ResidentLife = (props) => {
                         {ResidentLifeData.heading.text}
                     </MainText>
                 </PageHeading>
-                {ResidentLifeData.sections.map(section => {
+                {ResidentLifeData.sections.map((section, index) => {
                     return(
-                        <SectionWrapper>
-                            <SectionTitle>
-                                {section.title}
-                            </SectionTitle>
+                        <SectionWrapper leftImg={Boolean(index%2)}>
+                            <TitleWrapper>
+                                <SectionTitle>
+                                    {section.title}
+                                </SectionTitle>
+                            </TitleWrapper>
+                            <SectionImg image={section.image}/>
                             <SectionText>
                                 {section.text}
                             </SectionText>
