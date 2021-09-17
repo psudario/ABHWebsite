@@ -64,7 +64,7 @@ export const NavContentWrapper = styled.div`
         justify-content: space-around;
         align-items: center;
         background-color: rgba(167, 171, 170);
-        box-shadow : inset 0 0 5px black, 0 0 1px black;
+        /* box-shadow : inset 0 0 5px black, 0 0 1px black; */
         transform : ${props => {
             return (props.burgerClicked) ? 'translateX(0)' : 'translateX(100%)';
         }}
