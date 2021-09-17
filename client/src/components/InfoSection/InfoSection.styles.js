@@ -55,6 +55,8 @@ export const InfoSectionImg = styled.div`
     background-repeat: no-repeat;
     height: 50vw;
     width: 50vw;
+    max-height: 412px;
+    max-width: 412px;
     margin: 10px;
     border-radius: ${props => {return props.svg? 0 : '50%'}};
     box-shadow: ${props => {return props.svg? '' : `inset 0 0 5px 1px black`}};
