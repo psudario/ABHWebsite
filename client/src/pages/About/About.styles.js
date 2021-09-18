@@ -5,7 +5,6 @@ export const AboutPageWrapper = styled.div`
     padding-top: 12vh;
     display: flex;
     justify-content: center;
-    /* background-color: #28343D; */
     background-color: #666F75;
 `;
 
@@ -35,6 +34,7 @@ export const AboutTitle = styled.h1`
 
 export const AboutMessage = styled.p`
     width: 50%;
+    min-width: 370px;
     text-align: center;
 `;
 
