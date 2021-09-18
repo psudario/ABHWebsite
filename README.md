@@ -1,4 +1,4 @@
 # A Blessed Home Website
 
 ===
-## Instructions For 
+## To Change the Data, locate the Data.js file and edit the respective JSON
