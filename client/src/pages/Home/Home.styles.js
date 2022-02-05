@@ -12,7 +12,7 @@ export const BackgroundImage = styled.div`
     background-image: url(${props => {return props.image}});
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
 
     box-shadow: inset 0 0 5px 0 black;
