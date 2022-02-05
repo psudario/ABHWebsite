@@ -9,7 +9,7 @@ export const AboutPageWrapper = styled.div`
 `;
 
 export const AboutContentWrapper = styled.div`
-    width: 60vw;
+    width: 70vw;
     background-color: #fafafa;
     box-shadow: 0 0 2px black, inset 0 0 2px black;
     padding-bottom: 100px;
@@ -43,9 +43,10 @@ export const AboutSectionWrapper = styled.div`
 
     display: grid;
     grid-template-columns: 50% 50%;
+    /* grid-template-rows: 15% 5% 80%; */
     grid-template-areas:
-    "name image"
-    "title image"
+    "name name"
+    "title title"
     "text image";
 
     grid-gap: 1em;
@@ -92,4 +93,8 @@ export const AboutSectionPosition = styled.p`
 `;
 export const AboutSectionText = styled.p`
     grid-area: text;
+    
+    display: flex;
+    justify-content:center;
+    align-items: top;
 `;

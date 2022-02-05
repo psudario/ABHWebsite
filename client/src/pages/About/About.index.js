@@ -22,7 +22,6 @@ import { AboutPageData } from '../../Data.js';
 
 // Custom components
 const AboutSection = (props) => {
-
     return(
         <AboutSectionWrapper>
             <AboutSectionName>
