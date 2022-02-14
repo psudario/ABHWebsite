@@ -66,23 +66,22 @@ export const HomePageData = {
 export const AboutPageData = {
     people: [
         {
-            name: 'Remedios "Remy" Sudario',
+            name: 'Remedios "Remy" Sudario and Joel Sudario',
             image: Logo,
             position: 'CEO | Co-Owner',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            text: 'Joel and Remy are both nurses with over 25 years of hospital experience. Both Joel and Remy come from big families and have siblings in the medical field. Their family gave them motivation to start a residential assisted living that would be a home to all  their residents',
         },
         {
             name: 'Kim',
             image: Logo,
             position: 'Co-Owner',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-
+            text:'Kim’s late father struggled with cancer and lived in an assisted care facility. Kim helped to establish A Blessed Home to help people like her father.',
         }
     ],
     textSections: [
         {
             title: 'About Us!',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            text: 'A Blessed Home is a family-oriented facility run by nurses specializing in adult and geriatric care. With a passion for patient care and a wealth of medical knowledge clients can be reassured that their family is in capable hands and caring hearts.'
         },
     ]
 };
