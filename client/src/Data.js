@@ -57,8 +57,8 @@ export const HomePageData = {
 
     HomeInfo2: {
         image: HomeInfo1Img,
-        title: 'Lorem Ipsum',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',    
+        title: 'Why Choose An Assisted Living Facility?',
+        text: 'Assisted living facilities are a perfect place for seniors to receive care while still maintaining a sense of community. Receiving care in a home-like environment can be preferrable to seniors who are tired of clinical settings. With an assisted living facility, seniors are able to gain more privacy and independence.'
     },
 
 };
@@ -149,7 +149,7 @@ export const FooterData = {
             "Phone: (713)382-1666",
             "Email: ablessedhome8@gmail.com",
             "Office Hours: Mon-Fri 8AM-6PM | Sat-Sun 12PM-4PM",
-            "Visiting Hours: tentative"
+            "Visiting Hours: (281) 920-9072/(832) 971-3344"
         ]  
     },
     copyright: {
