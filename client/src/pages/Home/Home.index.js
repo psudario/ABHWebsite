@@ -25,6 +25,7 @@ const Home = (props) => {
     return (
         <HomeWrapper>
             <Hero
+                rel="preload"
                 image={HomePageData.HeroData.image}
                 title={HomePageData.HeroData.title}
                 text={HomePageData.HeroData.text}
@@ -36,6 +37,7 @@ const Home = (props) => {
                 textColor={HomePageData.MissionData.textColor}
             />
             <BackgroundImage
+                rel="preload"
                 image={HomePageData.BackgroundImages.kitchen}
             />
             <InfoSection
@@ -45,6 +47,7 @@ const Home = (props) => {
                 bullets={HomePageData.HomeInfo1.bullets}
             />
             <BackgroundImage
+                rel="preload"
                 image={HomePageData.BackgroundImages.livingRoom}
             />
             <InfoSection 
@@ -55,6 +58,7 @@ const Home = (props) => {
                 bullets={HomePageData.HomeInfo2.bullets}
             />
             <BackgroundImage
+                rel="preload"
                 image={HomePageData.BackgroundImages.bedroom}
             />
         </HomeWrapper>
