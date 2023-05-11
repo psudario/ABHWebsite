@@ -68,14 +68,8 @@ export const AboutPageData = {
         {
             name: 'Remedios "Remy" Sudario and Joel Sudario',
             image: Logo,
-            position: 'CEO | Co-Owner',
+            position: 'CEO | Owner',
             text: 'Joel and Remy are both nurses with over 25 years of hospital experience. Both Joel and Remy come from big families and have siblings in the medical field. Their family gave them motivation to start a residential assisted living that would be a home to all  their residents',
-        },
-        {
-            name: 'Kim',
-            image: Logo,
-            position: 'Co-Owner',
-            text:'Kim’s late father struggled with cancer and lived in an assisted care facility. Kim helped to establish A Blessed Home to help people like her father.',
         }
     ],
     textSections: [
